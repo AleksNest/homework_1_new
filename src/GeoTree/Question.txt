@@ -1,0 +1,26 @@
+1. как распечатать список ArrayList<Node> tree = new ArrayList<>();
+выводит ссылки, а не значения:
+
+Перепробовал все:
+
+1.переопределение to.String
+в классе GeoTree
+public String toString() {
+return tree + String.valueOf(tree);
+}
+в main:
+ System.out.println( gt.getTree().toString());
+
+2.System.out.println(listString);
+for(Node emp : gt.getTree()) {
+
+3.for (int i = 0; i <gt.getTree().size() ; i++) {
+  System.out.println(gt.getTree().get(i));
+    }
+ 4.String listString = "";
+for (Node s : gt.getTree())
+{
+listString += s + "\t";
+}
+
+5. gt.getTree().stream().forEach(System.out::println);
